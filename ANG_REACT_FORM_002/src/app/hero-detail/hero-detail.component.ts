@@ -8,7 +8,7 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 })
 export class HeroDetailComponent implements OnInit {
 
-  heroForm: FormGroup;
+  myForm: FormGroup;
   // heroForm = new FormGroup ({
   //   name: new FormControl()
   // });
@@ -18,7 +18,7 @@ export class HeroDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.heroForm = this._fb.group({
+    this.myForm = this._fb.group({
       name: new FormControl()
     });
   }
