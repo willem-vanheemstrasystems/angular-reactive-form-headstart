@@ -1,5 +1,5 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
 
 import { Address, Hero, states } from '../shared/data-model';
 import { HeroService }           from '../shared/hero.service';
@@ -24,7 +24,7 @@ export class HeroDetailComponent implements OnChanges, OnInit {
 
   ngOnInit() {
     this.myForm = this._fb.group({
-      name: new FormControl()
+      name: ['', Validators.required ] // WAS new FormControl()
     });
   }
 
