@@ -1,19 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder, FormArray } from '@angular/forms';
+
+import { Address, Hero, states } from '../shared/data-model';
+import { HeroService }           from '../shared/hero.service';
 
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: ['./hero-detail.component.css']
 })
-export class HeroDetailComponent implements OnInit {
+export class HeroDetailComponent implements OnChanges, OnInit {
 
   myForm: FormGroup;
   // heroForm = new FormGroup ({
   //   name: new FormControl()
   // });
 
-  constructor(private _fb: FormBuilder) { 
+  constructor(
+    private _fb: FormBuilder,
+    private heroService: HeroService) { 
 
   }
 
@@ -22,5 +27,7 @@ export class HeroDetailComponent implements OnInit {
       name: new FormControl()
     });
   }
+
+  ngOnChanges() {}  
 
 }

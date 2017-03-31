@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
+import { HeroService }         from './shared/hero.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ HeroService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
