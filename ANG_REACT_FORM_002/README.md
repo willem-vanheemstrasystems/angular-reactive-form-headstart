@@ -1,4 +1,6 @@
-# MyApp
+# ANG_REACT_FORM_002
+
+Based on 'Reactive Forms' at https://angular.io/docs/ts/latest/guide/reactive-forms.html
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
 
