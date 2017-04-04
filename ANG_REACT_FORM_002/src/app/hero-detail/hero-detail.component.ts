@@ -15,6 +15,7 @@ export class HeroDetailComponent implements OnChanges, OnInit {
   // heroForm = new FormGroup ({
   //   name: new FormControl()
   // });
+  states = states;
 
   constructor(
     private _fb: FormBuilder,
@@ -24,7 +25,13 @@ export class HeroDetailComponent implements OnChanges, OnInit {
 
   ngOnInit() {
     this.myForm = this._fb.group({
-      name: ['', Validators.required ] // WAS new FormControl()
+      name: ['', Validators.required ], // WAS new FormControl()
+      street: '',
+      city: '',
+      state: '',
+      zip: '',
+      power: '',
+      sidekick: ''
     });
   }
 
